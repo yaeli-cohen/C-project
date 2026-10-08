@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace DO
 {
-    internal class Answer
+    public record Answer(
+     int AnswerId,
+     int QuastionId,
+     string AnswerContent
+ )
     {
+        public Answer() : this(0, 0, string.Empty) { }
     }
 }

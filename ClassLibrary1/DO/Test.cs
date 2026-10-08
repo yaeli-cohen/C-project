@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace DO
 {
-    internal class Test
+
+    public record Test(
+        int TestId,
+        TestSubject Subject,
+        DateTime TestDate,
+        int AmountQuestion
+    )
     {
+        public Test() : this(0, default, default, 0) { }
     }
 }

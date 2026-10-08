@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace DO
 {
-    internal class Question
+
+    public record Quastion(
+        int QuastionId,
+        QuastionSubject Subject,
+        string QuastionContent,
+        int RightAns
+    )
     {
+        public Quastion() : this(0, default, string.Empty, 0) { }
     }
+
 }
