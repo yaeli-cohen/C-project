@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DalApi
+﻿namespace DalApi
 {
     public interface IDal
     {
-
-     //   ICrud Crud { get; } 
-        IStudent student { get; }
+        IStudent Student { get; }
         ITest Test { get; }
-        IQuestion question { get; }
+        IQuestion Question { get; }
+        IAnswer Answer { get; }
+        IQuestionExaminee QuestionExaminee { get; }
     }
 }

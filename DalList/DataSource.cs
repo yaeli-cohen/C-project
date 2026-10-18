@@ -4,20 +4,30 @@ namespace Dal
 {
     static internal class DataSource
     {
+        //רשימה המכילה את הפניות לכל ישות
+        static internal List<Student?> Students = new List<Student?>();
+        static internal List<Test?> Tests = new List<Test?>();
+        static internal List<Quastion?> questions = new List<Quastion?>();
+        static internal List<Answer?> answers = new List<Answer?>();
+        static internal List<QuestionExaminee?> questionExaminees = new List<QuestionExaminee?>();
 
-        static internal List<Student?> Students = new List<Student>();
-        static internal List<Test?> Tests = new List<Test>();
-        static internal List<Quastion?> quastions = new List<Quastion>();
 
-        static internal class Config    
+        static internal class Config
         {
+            //אתחול מספר ראשוני לכל ישות
             internal const int TestId = 100;
-            internal const int StudentId = 1000;
             internal const int QuestionId = 1;
+            internal const int AnswerId = 1;
 
+
+            //אתחול מספר רץ לכל ישות במספר הקבוע
             static private int initialTest = TestId;
-            static private int initialStudent = StudentId;
             static private int initialQuestion = QuestionId;
+            static private int initialAnswer = AnswerId;
+
+
+
+            //פונקציות קידום למספרים רצים
 
             internal static int InitialTest
             {
@@ -27,21 +37,22 @@ namespace Dal
 
                 }
             }
-            internal static int InitialStudent
-            {
-                get
-                {
-                    return initialStudent++;
-                }
-            }
 
             internal static int InitialQuestion
             {
                 get
                 {
-                    return initialQuestion++;
+                    return initialQuestion += 4;
                 }
 
+            }
+
+            internal static int InitialAnswer
+            {
+                get
+                {
+                    return initialAnswer++;
+                }
             }
         }
     }

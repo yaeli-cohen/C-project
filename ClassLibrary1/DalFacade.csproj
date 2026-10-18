@@ -11,8 +11,4 @@
 	  <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
 	  <UseCommonOutputDirectory>true</UseCommonOutputDirectory>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Include="C:\Users\User\Documents\תכנות\שנה ב\C#\Enums.cs" Link="Enums.cs" />
-  </ItemGroup>
 </Project>

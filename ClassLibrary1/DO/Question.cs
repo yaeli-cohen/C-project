@@ -9,8 +9,8 @@ namespace DO
 
     public record Quastion(
         int QuastionId,
-        QuastionSubject Subject,
-        string QuastionContent,
+        QuestionSubject Subject,
+        string QuestionContent,
         int RightAns
     )
     {

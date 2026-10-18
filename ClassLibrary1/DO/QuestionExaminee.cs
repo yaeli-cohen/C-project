@@ -1,19 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace DO;
 
-namespace DO
+public record QuestionExaminee(
+ int StudentId,
+ int TestId,
+ int QuastionId,
+ int? ChosenQuestion
+)
 {
-    public record QuestionExaminee(
-     int StudentId,
-     int TestId,
-     int QuastionId,
-     int? ChosenQuestion
- )
-    {
-        public QuestionExaminee() : this(0, 0, 0, null) { }
-    }
-
+    public QuestionExaminee() : this(0, 0, 0, null) { }
 }
