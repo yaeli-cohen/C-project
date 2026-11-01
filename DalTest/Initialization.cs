@@ -116,4 +116,9 @@ public static class Initialization
         s_dal.QuestionExaminee.Create(new QuestionExaminee(312345679, 1, 1, 2));
         s_dal.QuestionExaminee.Create(new QuestionExaminee(312345679, 1, 2, 2));
     }
+
+    internal static void Initialize(object s_dal)
+    {
+        throw new NotImplementedException();
+    }
 }

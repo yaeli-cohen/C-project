@@ -8,7 +8,9 @@ public class DalList : IDal
     public ITest Test => new TestImplementation();
 
     public IQuestion Question => new QuestionImplementation();
+
     public IAnswer Answer => new AnswerImplementation();
+
     public IQuestionExaminee QuestionExaminee => new QuestionExamineeImplementation();
 
 
