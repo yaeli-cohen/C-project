@@ -1,5 +1,7 @@
 ﻿using DO;
 using DalApi;
+//using Tools;
+using System.Reflection;
 
 namespace Dal;
 
@@ -7,6 +9,8 @@ internal class AnswerImplementation : IAnswer
 {
     public int Create(Answer item)
     {
+
+
         Answer newAnswer = item with { AnswerId = DataSource.Config.InitialAnswer };
         DataSource.answers.Add(newAnswer);
         return newAnswer.AnswerId;

@@ -298,7 +298,7 @@ public class Program
     }
 
 
-    public static T Read<T>(ICrud<T> s_dal) where T : class
+    public static void Read<T>(ICrud<T> s_dal) where T : class
     {
         Console.WriteLine("Enter ID to read:");
         int id = int.Parse(Console.ReadLine());
@@ -306,12 +306,12 @@ public class Program
         if (item != null)
         {
             Console.WriteLine(item.ToString());
-            return item;
+            return ;
         }
         else
         {
             Console.WriteLine("Item not found.");
-            return null;
+            return ;
         }
     }
 
@@ -343,29 +343,115 @@ public class Program
         Console.WriteLine("Item deleted successfully.");
     }
     public static void AddStudent()
-    { }
+    {
+     
+    Console.WriteLine("Enter Student ID:");
+        int id = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter Student Name:");
+        string name = Console.ReadLine();
+        Console.WriteLine("Enter Test ID:");
+        int testId = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter Mark:");
+        int Mark = int.Parse(Console.ReadLine());
+        var student = new Student(id, name, testId,Mark);
+        try { 
+        s_dal.Student.Create(student);
+        Console.WriteLine("Student added successfully.");
+    }catch (Exception ex)
+        {
+            Console.WriteLine($"Error adding student: {ex.Message}");
+        }
+    }
 
     public static void UpdateStudent()
-    { }
+    {
+        Console.WriteLine("insert Student ID to update:");
+        int id = int.Parse(Console.ReadLine());
+
+
+    }
 
     public static void AddQuestion()
-    { }
+    { 
+    Console.WriteLine("Enter Question ID:");
+        int id = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter Question Subject (MATH, ENGLISH, TECHNOLOGY):");
+        string subjectInput = Console.ReadLine();
+        if (!Enum.TryParse(subjectInput, true, out QuestionSubject subject))
+        {
+            Console.WriteLine("Invalid subject. Please enter MATH, ENGLISH, or TECHNOLOGY.");
+            return;
+        }
+        Console.WriteLine("Enter Question Content:");
+        string content = Console.ReadLine();
+        Console.WriteLine("Enter Right Answer ID:");
+        int rightAns = int.Parse(Console.ReadLine());
+        var question = new Question(id, subject, content, rightAns);
+        try
+        {
+            s_dal.Question.Create(question);
+            Console.WriteLine("Question added successfully.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error adding question: {ex.Message}");
+        }
+    }
 
     public static void UpdateQuestion()
     { }
 
     public static void AddAnswer()
-    { }
+    { 
+    Console.WriteLine("Enter Answer ID:");
+        int id = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter Question ID:");
+        int questionId = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter Answer Content:");
+        string content = Console.ReadLine();
+        var answer = new Answer(id, questionId, content);
+        try
+        {
+            s_dal.Answer.Create(answer);
+            Console.WriteLine("Answer added successfully.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error adding answer: {ex.Message}");
+        }
+    }
     public static void UpdateAnswer()
     { }
     public static void AddTest()
-    { }
+    {
+        Console.WriteLine("Enter ");
+            }
     public static void UpdateTest()
     { }
     public static void AddQuestionExaminee()
-    { }
+    {
+    Console.WriteLine("Enter QuestionExaminee ID:");
+        int id = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter Question ID:");
+        int questionId = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter Test ID:");
+        int testId = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter Examinee ID:");
+        int examineeId = int.Parse(Console.ReadLine());
+        var questionExaminee = new QuestionExaminee(id, questionId,testId, examineeId);
+        try
+        {
+            s_dal.QuestionExaminee.Create(questionExaminee);
+            Console.WriteLine("QuestionExaminee added successfully.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error adding QuestionExaminee: {ex.Message}");
+        }
+    }
     public static void UpdateQuestionExaminee()
-    { }
+    {
+    }
 
 }
 

@@ -7,7 +7,7 @@ namespace Dal
         //רשימה המכילה את הפניות לכל ישות
         static internal List<Student?> Students = new List<Student?>();
         static internal List<Test?> Tests = new List<Test?>();
-        static internal List<Quastion?> questions = new List<Quastion?>();
+        static internal List<Question?> questions = new List<Question?>();
         static internal List<Answer?> answers = new List<Answer?>();
         static internal List<QuestionExaminee?> questionExaminees = new List<QuestionExaminee?>();
 

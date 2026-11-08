@@ -5,17 +5,17 @@ namespace Dal;
 
 internal class QuestionImplementation : IQuestion
 {
-    public int Create(Quastion item)
+    public int Create(Question item)
     {
-        Quastion newQuestion = item with { QuastionId = DataSource.Config.QuestionId };
+        Question newQuestion = item with { QuestionId = DataSource.Config.QuestionId };
         DataSource.questions.Add(newQuestion);
-        return newQuestion.QuastionId;
+        return newQuestion.QuestionId;
 
     }
 
     public void Delete(int id)
     {
-        var question = DataSource.questions.FirstOrDefault(t => t.QuastionId == id);
+        var question = DataSource.questions.FirstOrDefault(t => t.QuestionId == id);
         if (question != null)
         {
             DataSource.questions.Remove(question);
@@ -23,19 +23,19 @@ internal class QuestionImplementation : IQuestion
         throw new KeyNotFoundException($"question is not found");
     }
 
-    public Quastion? Read(int id)
+    public Question? Read(int id)
     {
-        return DataSource.questions.FirstOrDefault(q => q.QuastionId == id);
+        return DataSource.questions.FirstOrDefault(q => q.QuestionId == id);
     }
 
-    public List<Quastion> ReadAll()
+    public List<Question> ReadAll()
     {
-        return new List<Quastion>(DataSource.questions.ToList());
+        return new List<Question>(DataSource.questions.ToList());
     }
 
-    public void Update(Quastion item)
+    public void Update(Question item)
     {
-        var question = DataSource.questions.FirstOrDefault(t => t.QuastionId == item.QuastionId);
+        var question = DataSource.questions.FirstOrDefault(t => t.QuestionId == item.QuestionId);
         if (question != null)
         {
             DataSource.questions.Remove(question);

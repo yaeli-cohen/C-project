@@ -3,7 +3,7 @@
 public record QuestionExaminee(
  int StudentId,
  int TestId,
- int QuastionId,
+ int QuestionId,
  int? ChosenQuestion
 )
 {

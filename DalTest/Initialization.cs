@@ -53,18 +53,18 @@ public static class Initialization
     private static void CreateQuestions()
     {
         // מתמטיקה (שאלות 1-4)
-        s_dal.Question.Create(new Quastion(1, QuestionSubject.MATH, "מה תוצאת התרגיל: 12 כפול 12?", 1));
-        s_dal.Question.Create(new Quastion(2, QuestionSubject.MATH, "חשב את ההיקף של ריבוע שצלעו 5 סמ.", 2));
-        s_dal.Question.Create(new Quastion(3, QuestionSubject.MATH, "מהו המספר הראשוני הראשון?", 3));
-        s_dal.Question.Create(new Quastion(4, QuestionSubject.MATH, "כמה מעלות יש בסכום זוויות של משולש?", 4));
+        s_dal.Question.Create(new Question(1, QuestionSubject.MATH, "מה תוצאת התרגיל: 12 כפול 12?", 1));
+        s_dal.Question.Create(new Question(2, QuestionSubject.MATH, "חשב את ההיקף של ריבוע שצלעו 5 סמ.", 2));
+        s_dal.Question.Create(new Question(3, QuestionSubject.MATH, "מהו המספר הראשוני הראשון?", 3));
+        s_dal.Question.Create(new Question(4, QuestionSubject.MATH, "כמה מעלות יש בסכום זוויות של משולש?", 4));
 
         // אנגלית (שאלות 5-6)
-        s_dal.Question.Create(new Quastion(5, QuestionSubject.ENGLISH, "Translate to Hebrew: Book", 5));
-        s_dal.Question.Create(new Quastion(6, QuestionSubject.ENGLISH, "What is the plural form of Child?", 6));
+        s_dal.Question.Create(new Question(5, QuestionSubject.ENGLISH, "Translate to Hebrew: Book", 5));
+        s_dal.Question.Create(new Question(6, QuestionSubject.ENGLISH, "What is the plural form of Child?", 6));
 
         // טכנולוגיה (שאלות 7-8)
-        s_dal.Question.Create(new Quastion(7, QuestionSubject.TECHNOLOGY, "מה תפקידו של זיכרון ה-RAM במחשב?", 7));
-        s_dal.Question.Create(new Quastion(8, QuestionSubject.TECHNOLOGY, "איזו שפת תכנות מנוהלת על ידי סביבת .NET?", 8));
+        s_dal.Question.Create(new Question(7, QuestionSubject.TECHNOLOGY, "מה תפקידו של זיכרון ה-RAM במחשב?", 7));
+        s_dal.Question.Create(new Question(8, QuestionSubject.TECHNOLOGY, "איזו שפת תכנות מנוהלת על ידי סביבת .NET?", 8));
     }
 
     private static void CreateAnswers()

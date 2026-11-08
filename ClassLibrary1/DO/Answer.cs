@@ -8,7 +8,7 @@ namespace DO
 {
     public record Answer(
      int AnswerId,
-     int QuastionId,
+     int QuestionId,
      string AnswerContent
  )
     {

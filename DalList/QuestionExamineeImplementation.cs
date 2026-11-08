@@ -10,7 +10,7 @@ internal class QuestionExamineeImplementation : IQuestionExaminee
         var searchQuestionExaminee = DataSource.questionExaminees.FirstOrDefault(qe =>
             qe.StudentId == item.StudentId &&
             qe.TestId == item.TestId &&
-            qe.QuastionId == item.QuastionId);
+            qe.QuestionId == item.QuestionId);
 
         if (searchQuestionExaminee != null)
         {
@@ -21,7 +21,7 @@ internal class QuestionExamineeImplementation : IQuestionExaminee
             QuestionExaminee newQuestionExaminee = new QuestionExaminee(
                 item.StudentId,
                 item.TestId,
-                item.QuastionId,
+                item.QuestionId,
                 item.ChosenQuestion
             );
 
@@ -35,7 +35,7 @@ internal class QuestionExamineeImplementation : IQuestionExaminee
         var existingQuestionExaminee = DataSource.questionExaminees.FirstOrDefault(qe =>
             qe.StudentId == studentId &&
             qe.TestId == testId &&
-            qe.QuastionId == questionId);
+            qe.QuestionId == questionId);
 
         if (existingQuestionExaminee != null)
         {
@@ -58,7 +58,7 @@ internal class QuestionExamineeImplementation : IQuestionExaminee
         return DataSource.questionExaminees.FirstOrDefault(qe =>
             qe.TestId == testId &&
             qe.StudentId == studentId &&
-            qe.QuastionId == questionId);
+            qe.QuestionId == questionId);
     }
 
     // מימוש עבור חתימת ה-ICrud המקורית
@@ -77,7 +77,7 @@ internal class QuestionExamineeImplementation : IQuestionExaminee
         var existingQuestionExaminee = DataSource.questionExaminees.FirstOrDefault(qe =>
             qe.StudentId == item.StudentId &&
             qe.TestId == item.TestId &&
-            qe.QuastionId == item.QuastionId);
+            qe.QuestionId == item.QuestionId);
 
         if (existingQuestionExaminee != null)
         {
@@ -86,7 +86,7 @@ internal class QuestionExamineeImplementation : IQuestionExaminee
         }
         else
         {
-            throw new KeyNotFoundException($"QuestionExaminee with Student ID {item.StudentId}, Test ID {item.TestId}, and Question ID {item.QuastionId} not found.");
+            throw new KeyNotFoundException($"QuestionExaminee with Student ID {item.StudentId}, Test ID {item.TestId}, and Question ID {item.QuestionId} not found.");
         }
     }
 }
