@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DalFacade", "ClassLibrary1\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DalList", "DalList\DalList.csproj", "{653BD757-8F97-4E7A-8391-432B7AFA0C81}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools", "Tools\Tools.csproj", "{A869FD18-652D-4DDB-8FD7-417F4CEA9553}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{653BD757-8F97-4E7A-8391-432B7AFA0C81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{653BD757-8F97-4E7A-8391-432B7AFA0C81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{653BD757-8F97-4E7A-8391-432B7AFA0C81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A869FD18-652D-4DDB-8FD7-417F4CEA9553}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A869FD18-652D-4DDB-8FD7-417F4CEA9553}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A869FD18-652D-4DDB-8FD7-417F4CEA9553}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A869FD18-652D-4DDB-8FD7-417F4CEA9553}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
